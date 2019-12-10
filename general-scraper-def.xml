@@ -1,0 +1,63 @@
+<jqm>
+    <jar>
+<!--        <path>jqm-demo/jqm-test-pyl/jqm-test-pyl.jar</path>-->
+    <path>/home/jack/springcrawler/target/acled-spring-crawler-1.2.6.jar</path>
+
+        <jobdefinitions>
+            <jobDefinition>
+                <name>SpringCollector</name>
+                <description>Crawler that user the Spring architecture to output crawled docs.</description>
+                <canBeRestarted>true</canBeRestarted>
+                <javaClassName>com.casm.acled.crawler.spring.SpringCrawler</javaClassName>
+                <application>incremental-crawling</application>
+                <module>Crawling</module>
+                <keyword1></keyword1>
+                <keyword2></keyword2>
+                <keyword3></keyword3>
+                <highlander>false</highlander>
+                <parameters>
+                    <parameter>
+                        <key>casm.jqm.polling.agent</key>
+                        <value>casm.jqm.polling.agent http://www.taglaboratory.org/</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.filter</key>
+                        <value>casm.jqm.polling.filter .*</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.crawldb</key>
+                        <value>casm.jqm.polling.crawldb /var/www/acled/jqm/crawl-databases</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.depth</key>
+                        <value>casm.jqm.polling.depth 8</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.politeness</key>
+                        <value>casm.jqm.polling.politeness 350</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.threads</key>
+                        <value>casm.jqm.polling.threads 2</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.robots</key>
+                        <value>casm.jqm.polling.robots false</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.polling.sitemap</key>
+                        <value>casm.jqm.polling.sitemap false</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.crawling.index</key>
+                        <value>casm.jqm.crawling.index</value>
+                    </parameter>
+                    <parameter>
+                        <key>casm.jqm.scraping.scrapers</key>
+                        <value>casm.jqm.scraping.scrapers /var/www/acled/jqm/example_scrapers</value>
+                    </parameter>
+                </parameters>
+            </jobDefinition>
+        </jobdefinitions>
+    </jar>
+</jqm>
